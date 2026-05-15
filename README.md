@@ -27,3 +27,7 @@ The central idea of WSGI is to define a common interface that allows web applica
 A WSGI application is simply a "callable" Python object (such as a function or a method) that accepts two parameters: a dictionary containing environment variables (which includes HTTP request data) and a callback function to start the HTTP response. The application then returns the response data in an iterable. This allows the web application to be written in a modular and reusable way, following the principles of the WSGI interface.<br/>
 
 The adoption of WSGI as a standard in Python web development has brought great flexibility to the community, allowing for a rich ecology of frameworks and web servers, as well as facilitating the composition of applications with components from different sources. This has promoted a more dynamic and innovative web development environment within the Python ecosystem.<br/>
+
+
+## Tips
+1. **Use us-east-2 (Ohio) region**: Because it always will have all services and its the cheaper region;
