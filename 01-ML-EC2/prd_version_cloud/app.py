@@ -39,7 +39,7 @@ def predict():
         input_data = np.array([english_test, iq_grade, psico_exam]).reshape(1, 3)
 
         # Dataframe com dados e nomes de colunas
-        input_data_df = pd.DataFrame(input_data, columns=['nota_english_test', 'valor_qi', 'nota_psico_examtecnico'])
+        input_data_df = pd.DataFrame(input_data, columns=['grade_english_test', 'iq_value', 'psychotechnical_exam_score'])
 
         # Standardizingh the new data
         input_data_standardized = scaler.transform(input_data_df)
