@@ -6,7 +6,7 @@ import plotly.express as px
 from phi.agent import Agent
 from phi.model.groq import Groq
 from phi.tools.yfinance import YFinanceTools
-from phi.tools.duckduckgo import DuckDuckGo
+from phi.tools.duckduckgo import DDGS
 from dotenv import load_dotenv
 
 
@@ -44,17 +44,23 @@ def plot_volume(hist, ticker):
     fig = px.bar(hist, x='Date', y='Volume', title=f"{ticker} Trading Volume (Last 6 Months)")    
     st.plotly_chart(fig)
 
+def search_web(query: str) -> str:
+    """Searches DuckDuckGo for the given query and returns results."""
+    with DDGS() as ddgs:
+        results = [r for r in ddgs.text(query, max_results=5)]
+        return str(results)
+
 ########## Agentes de IA ##########
 # Agentes de IA 
 web_search_agent = Agent(name="Web Search Agent",
                               role="To search the web",
-                              model=Groq(id="deepseek-r1-distill-llama-70b"),
-                              tools=[DuckDuckGo()],
+                              model=Groq(id="llama-3.3-70b-versatile"),
+                              tools=[search_web],
                               instructions=["Always includes the sources"],
                               show_tool_calls=True, markdown=True)
 
 financial_agent = Agent(name="Financial Agent",
-                              model=Groq(id="deepseek-r1-distill-llama-70b"),
+                              model=Groq(id="llama-3.3-70b-versatile"),
                               tools=[YFinanceTools(stock_price=True,
                                                    analyst_recommendations=True,
                                                    stock_fundamentals=True,
