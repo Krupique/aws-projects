@@ -89,3 +89,39 @@ More tickers can be found here: https://stockanalysis.com/list/nasdaq-stocks/
 ### Purpose of the App:
 This application performs advanced real-time Nasdaq stock price analysis using AI Agents with the DeepSeek model through Groq and AWS infrastructure to support day trading strategies for monetization. A complete example app for those who want to start in Data and AI Consulting.
 """)
+
+# st.title(":100: Real-Time Day Trading Analytics")
+st.header("Real-time Day Trading Analytics with AI Agents")
+
+# User input
+ticker = st.text_input("Enter the ticker code").upper()
+
+
+if st.button("Send"):
+
+    if ticker:
+
+        with st.spinner("Retrieving real-time data. Please wait..."):
+            
+            hist = extract_data(ticker)
+            
+            st.subheader("AI-Generated Analysis")
+            
+            # Run the AI ​​Agents team
+            ai_response = multi_ai_agent.run(f"Summarize the analyst recomendation and share the last news about {ticker}")
+
+            # Removing lines which start with "Running:"
+            # Removing the block "Running:" and lines "transfer_task_to_finance_ai_agent"
+            clean_response = re.sub(r"(Running:[\s\S]*?\n\n)|(^transfer_task_to_finance_ai_agent.*\n?)","", ai_response.content, flags=re.MULTILINE).strip()
+
+            st.markdown(clean_response)
+
+            # Render the plots
+            st.subheader("Data Visualization")
+            plot_stock_price(hist, ticker)
+            plot_candlestick(hist, ticker)
+            plot_moving_average(hist, ticker)
+            plot_volume(hist, ticker)
+    else:
+        st.error("Invalid ticker. Enter a valid ticker.")
+
