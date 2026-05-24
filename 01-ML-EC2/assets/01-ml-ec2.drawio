@@ -1,0 +1,69 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" version="28.2.5" pages="2">
+  <diagram name="Página-1" id="NqoMAKj9zmbSdjCltF45">
+    <mxGraphModel dx="2946" dy="1103" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="8R7MQLUhlDSmyuLK4m_u-18" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="350" width="750" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="8R7MQLUhlDSmyuLK4m_u-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="8R7MQLUhlDSmyuLK4m_u-9" target="8R7MQLUhlDSmyuLK4m_u-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8R7MQLUhlDSmyuLK4m_u-9" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="390" width="210" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="8R7MQLUhlDSmyuLK4m_u-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8R7MQLUhlDSmyuLK4m_u-1" target="8R7MQLUhlDSmyuLK4m_u-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8R7MQLUhlDSmyuLK4m_u-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="380" width="170" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="8R7MQLUhlDSmyuLK4m_u-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8R7MQLUhlDSmyuLK4m_u-2" target="8R7MQLUhlDSmyuLK4m_u-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8R7MQLUhlDSmyuLK4m_u-2" value="Front-end (HTML, CSS)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="335" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8R7MQLUhlDSmyuLK4m_u-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="8R7MQLUhlDSmyuLK4m_u-3" target="8R7MQLUhlDSmyuLK4m_u-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8R7MQLUhlDSmyuLK4m_u-3" value="Back-end (Python - Flask)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="335" y="500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8R7MQLUhlDSmyuLK4m_u-4" value="ML App" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="365" y="380" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8R7MQLUhlDSmyuLK4m_u-8" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.ec2;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="594.75" y="420" width="76.5" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="8R7MQLUhlDSmyuLK4m_u-10" value="EC2 instance" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="530" y="390" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8R7MQLUhlDSmyuLK4m_u-11" value="&lt;div style=&quot;line-height: 100%;&quot;&gt;&lt;h1 style=&quot;margin-top: 0px; line-height: 100%;&quot;&gt;&lt;font style=&quot;font-size: 16px; line-height: 100%;&quot;&gt;AWS Linux&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;Architecture: t3.micro;&lt;/p&gt;&lt;p&gt;Created new key pair;&lt;/p&gt;&lt;p&gt;Networking settings: Allow SSH, HTTP and HTTPS;&lt;/p&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="530" y="570" width="210" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="8R7MQLUhlDSmyuLK4m_u-13" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="790" y="390" width="210" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="8R7MQLUhlDSmyuLK4m_u-15" value="" style="shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#EF8F21;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.linux;" vertex="1" parent="1">
+          <mxGeometry x="854.37" y="433" width="81.25" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8R7MQLUhlDSmyuLK4m_u-16" value="AWS Linux" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="790" y="390" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8R7MQLUhlDSmyuLK4m_u-17" value="&lt;div&gt;&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;AWS Linux&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;Running the services in background to keep the serving working even without the terminal opened;&lt;/p&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="790" y="570" width="210" height="170" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="Otr3PGFhxRSf03ev3Yap" name="Página-2">
+    <mxGraphModel dx="3416" dy="1157" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
