@@ -10,6 +10,8 @@
 
 # Deploy on AWS
 
+<img src="assets/01-ml-ec2-flowchart.png">
+
 1. Select the EC2 service
    * Create an instance on EC2
    * Select the image (Amazon Linux)
