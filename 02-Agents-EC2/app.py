@@ -45,7 +45,47 @@ def plot_volume(hist, ticker):
     st.plotly_chart(fig)
 
 ########## Agentes de IA ##########
+# Agentes de IA 
+web_search_agent = Agent(name="Web Search Agent",
+                              role="To search the web",
+                              model=Groq(id="deepseek-r1-distill-llama-70b"),
+                              tools=[DuckDuckGo()],
+                              instructions=["Always includes the sources"],
+                              show_tool_calls=True, markdown=True)
 
+financial_agent = Agent(name="Financial Agent",
+                              model=Groq(id="deepseek-r1-distill-llama-70b"),
+                              tools=[YFinanceTools(stock_price=True,
+                                                   analyst_recommendations=True,
+                                                   stock_fundamentals=True,
+                                                   company_news=True)],
+                              instructions=["Use tables to show the data"],
+                              show_tool_calls=True, markdown=True)
 
+multi_ai_agent = Agent(team=[web_search_agent, financial_agent],
+                       model=Groq(id="llama-3.3-70b-versatile"),
+                       instructions=["Always include sources", "Use tables to show the data"],
+                       show_tool_calls=True, markdown=True)
 
 ########## App Web ##########
+st.set_page_config(page_title="Real-Time Day Trading Analytics", page_icon=":100:", layout="wide")
+
+# Sidebar
+st.sidebar.title("Instructions")
+st.sidebar.markdown("""
+### How to use the App:
+
+- Enter the ticker symbol of the desired stock in the central field.
+- Click the **Analyze** button to obtain real-time analysis with AI-generated visualizations and insights.
+
+### Examples of valid tickers:
+- MSFT (Microsoft)
+- TSLA (Tesla)
+- AMZN (Amazon)
+- GOOG (Alphabet)
+
+More tickers can be found here: https://stockanalysis.com/list/nasdaq-stocks/
+
+### Purpose of the App:
+This application performs advanced real-time Nasdaq stock price analysis using AI Agents with the DeepSeek model through Groq and AWS infrastructure to support day trading strategies for monetization. A complete example app for those who want to start in Data and AI Consulting.
+""")
