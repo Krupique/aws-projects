@@ -221,5 +221,6 @@ __marimo__/
 # My files
 ignore/
 .env
-01-ML-EC2/keys
+01-ML-EC2/keys/
 02-Agents-EC2/.env
+02-Agents-EC2/keys/
