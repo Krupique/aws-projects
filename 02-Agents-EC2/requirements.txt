@@ -1,0 +1,7 @@
+streamlit
+yfinance
+plotly
+phidata
+groq
+python-dotenv
+duckduckgo-search
